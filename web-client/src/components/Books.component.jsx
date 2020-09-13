@@ -9,7 +9,7 @@ function BookListItem({id, name, authorId, editHandler, deleteHandler, author}) 
         <div className="list-item">
             <span>{id}</span>
             <span>{name}</span>
-            <span>{author.name}</span>
+            <span>{author.name || ''}</span>
             <span className="button-container">
                 <button onClick={() => editHandler({id, name, authorId})}>Edit</button>
                 <button onClick={() => deleteHandler(id)}>Delete</button>
